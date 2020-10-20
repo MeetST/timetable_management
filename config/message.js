@@ -6,4 +6,10 @@ module.exports = {
     PROFESSOR_ADDED: "Professor added successfully",
     PARAMETER_MISSING: "One or more parameters are missing",
     PROFESSOR_DUPLICATE_EMAIL: "Professor with provided email already exist in the system",
+    LECTURE_ADDED: "Lecture added successfully",
+    PROFESSOR_DAILY_LECTURE_LIMIT_REACHED: "Can not add more than 4 lectures a day for single professor",
+    PROFESSOR_WEEKLY_LECTURE_LIMIT_REACHED: "Can not add more than 18 lectures a week for single professor",
+    DAILY_LECTURE_LIMIT_REACHED: "Can not add more than 6 lectures a day for class",
+    WEEKLY_LECTURE_LIMIT_REACHED: "Can not add more than 25 lectures a week for class",
+    CLASS_ID_REQUIRED: "Class id is required",
 }

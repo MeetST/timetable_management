@@ -16,6 +16,10 @@ var schema = new Schema({
         type: Number,
         required: true
     },
+    class: {
+        type: ObjectId,
+        ref: 'tbl_class',
+    },
     professor: {
         type: ObjectId,
         ref: 'tbl_professor',
