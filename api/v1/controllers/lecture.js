@@ -1,4 +1,6 @@
 const Lecture = require('../models/lecture');
+const Professor = require('../models/professor');
+const Class = require('../models/class');
 const Message = require('../../../config/message')
 
 let _self = {
@@ -104,10 +106,14 @@ let _self = {
                     day: 1,
                     slot: 1
                 });
+            let professorDetails = await Professor.findOne({
+                _id: req.query.professor_id
+            })
             lectures = lectures.map((lec) => lec = lec)
             returnResp = {
                 message: Message.COMMON_SUCCESS,
                 data: {
+                    professor: professorDetails,
                     list: lectures
                 }
             }
@@ -128,9 +134,13 @@ let _self = {
                 class: req.query.class_id
             }
             let lectures = await Lecture.find(query).sort({ day: 1, slot: 1 });
+            let classDetails = await Class.findOne({
+                _id: req.query.class_id
+            })
             returnResp = {
                 message: Message.COMMON_SUCCESS,
                 data: {
+                    class: classDetails,
                     list: lectures
                 }
             }
