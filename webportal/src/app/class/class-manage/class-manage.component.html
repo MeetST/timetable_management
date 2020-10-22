@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-md-12">
+    <button class="btn btn-lg btn-outline-primary" (click)="openModal(content)">Add Class</button>
+  </div>
+</div>
+
+<div style="overflow:auto;">
+  <table>
+    <tr>
+      <th>Class List</th>
+    </tr>
+    <tr *ngFor="let class of classList">
+      <td>{{class.name}}</td>
+    </tr>
+  </table>
+</div>
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add Class</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <div class="form-row align-items-center">
+          <div class="col-12">
+            <label class="form-label mb-0">Class name</label>
+          </div>
+          <div class="form-group col-12">
+            <input id="cname" (input)="checkIsEmpty()" [(ngModel)]="className" class="form-control" name="dp">
+            <div class="tooltip-box mb-2" *ngIf="isEmptyClassName">
+              <h6 class="err-danger">Please enter class name </h6>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="submitClass()">Save</button>
+  </div>
+</ng-template>

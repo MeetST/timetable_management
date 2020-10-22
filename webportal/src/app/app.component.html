@@ -2,8 +2,8 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
         <div class="sidebar-heading">Time Table Management </div>
         <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action bg-light">Class Management</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Professor Management</a>
+            <a routerLink="/class-manage" class="list-group-item list-group-item-action bg-light">Class Management</a>
+            <a routerLink="/professor-manage" class="list-group-item list-group-item-action bg-light">Professor Management</a>
         </div>
     </div>
     <div id="page-content-wrapper">
@@ -21,6 +21,7 @@
             </div>
         </nav>
         <div class="container-fluid">
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

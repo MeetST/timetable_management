@@ -1,0 +1,77 @@
+<div class="row">
+  <div class="col-md-12">
+    <button class="btn btn-lg btn-outline-primary" (click)="openModal(content)">Add Professor</button>
+  </div>
+</div>
+
+<div style="overflow:auto;">
+  <table>
+    <tr>
+      <th colspan="3">Professor List</th>
+    </tr>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+    </tr>
+    <tr *ngFor="let professor of professorList">
+      <td>{{professor.first_name}}</td>
+      <td>{{professor.last_name}}</td>
+      <td>{{professor.email}}</td>
+    </tr>
+  </table>
+</div>
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add Professor</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="adduserForm" novalidate="">
+      <div class="form-group">
+        <div class="form-row align-items-center">
+          <div class="col-12">
+            <label class="form-label mb-0">First name</label>
+          </div>
+          <div class="form-group col-12">
+            <input id="fname" formControlName="first_name" class="form-control" name="dp">
+            <div class="tooltip-box mb-2">
+              <h6 class="err-danger" *ngIf="submitted && f.first_name.errors" >Please enter first name </h6>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label mb-0">Last name</label>
+          </div>
+          <div class="form-group col-12">
+            <input id="lname" formControlName="last_name" class="form-control" name="dp">
+            <div class="tooltip-box mb-2">
+              <h6 class="err-danger" *ngIf="submitted && f.last_name.errors">Please enter last name </h6>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label mb-0">Email</label>
+          </div>
+          <div class="form-group col-12">
+            <input id="email" formControlName="email" class="form-control" name="dp">
+            <div class="tooltip-box mb-2">
+              <h6 class="err-danger" *ngIf="submitted && f.email.errors && f.email.errors.required" >Please enter email </h6>
+              <h6 class="err-danger" *ngIf="submitted && f.email.errors && f.email.errors.pattern" >Please enter valid email </h6>
+              <h6 class="err-danger" *ngIf="duplicateEmail" >Professor with provided email already exist in the system </h6>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" (click)="submitProfessor()" class="btn btn-outline-dark">Save</button>
+  </div>
+</ng-template>
