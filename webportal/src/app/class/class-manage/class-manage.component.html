@@ -18,6 +18,9 @@
       <td> <button [routerLink]="['/class-view',class._id]" routerLinkActive="router-link-active"
           class="btn btn-sm btn-outline-dark">Manage Time Table</button></td>
     </tr>
+    <tr *ngIf="classList.length == 0">
+      <td colspan="2" style="color: gray; text-align: center;"> No class found </td>
+    </tr>
   </table>
 </div>
 
