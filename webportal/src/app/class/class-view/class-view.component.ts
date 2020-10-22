@@ -21,7 +21,7 @@ export class ClassViewComponent implements OnInit {
   timeTable = [];
   modalTitle = "Add Lecture ";
   class_id = "";
-  class = {};
+  class: any = {};
   professorList = [];
   limitExceededErr = '';
   submitted = false;

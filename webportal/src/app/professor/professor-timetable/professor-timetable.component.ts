@@ -16,7 +16,7 @@ export class ProfessorTimetableComponent implements OnInit {
     this.getTimeTable();
   }
 
-  professor = {};
+  professor: any = {};
   timeTable = [];
   professor_id = "";
 
