@@ -1,0 +1,172 @@
+<table>
+  <tr>
+    <th colspan="6">Class Time Table</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Day 1</th>
+    <th>Day 2</th>
+    <th>Day 3</th>
+    <th>Day 4</th>
+    <th>Day 5</th>
+  </tr>
+  <tr>
+    <th>Lecture 1</th>
+    <td id="11" *ngIf="displaySubject(1, 1)">{{ displaySubject(1, 1) }} </td>
+    <td id="11" *ngIf="!displaySubject(1, 1)"> <button (click)="openModal(content,1, 1)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="21" *ngIf="displaySubject(2, 1)">{{ displaySubject(2, 1) }} </td>
+    <td id="21" *ngIf="!displaySubject(2, 1)"> <button (click)="openModal(content,2, 1)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="31" *ngIf="displaySubject(3, 1)">{{ displaySubject(3, 1) }} </td>
+    <td id="31" *ngIf="!displaySubject(3, 1)"> <button (click)="openModal(content,3, 1)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="41" *ngIf="displaySubject(4, 1)">{{ displaySubject(4, 1) }} </td>
+    <td id="41" *ngIf="!displaySubject(4, 1)"> <button (click)="openModal(content,4, 1)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="51" *ngIf="displaySubject(5, 1)">{{ displaySubject(5, 1) }} </td>
+    <td id="51" *ngIf="!displaySubject(5, 1)"> <button (click)="openModal(content,5, 1)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+  </tr>
+  <tr>
+    <th>Lecture 2</th>
+    <td id="12" *ngIf="displaySubject(1, 2)">{{ displaySubject(1, 2) }} </td>
+    <td id="12" *ngIf="!displaySubject(1, 2)"> <button (click)="openModal(content,1, 2)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="22" *ngIf="displaySubject(2, 2)">{{ displaySubject(2, 2) }} </td>
+    <td id="22" *ngIf="!displaySubject(2, 2)"> <button (click)="openModal(content,2, 2)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="32" *ngIf="displaySubject(3, 2)">{{ displaySubject(3, 2) }} </td>
+    <td id="32" *ngIf="!displaySubject(3, 2)"> <button (click)="openModal(content,3, 2)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="42" *ngIf="displaySubject(4, 2)">{{ displaySubject(4, 2) }} </td>
+    <td id="42" *ngIf="!displaySubject(4, 2)"> <button (click)="openModal(content,4, 2)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="52" *ngIf="displaySubject(5, 2)">{{ displaySubject(5, 2) }} </td>
+    <td id="52" *ngIf="!displaySubject(5, 2)"> <button (click)="openModal(content,5, 2)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+  </tr>
+  <tr>
+    <th>Lecture 3</th>
+    <td id="13" *ngIf="displaySubject(1, 3)">{{ displaySubject(1, 3) }} </td>
+    <td id="13" *ngIf="!displaySubject(1, 3)"> <button (click)="openModal(content,1, 3)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="23" *ngIf="displaySubject(2, 3)">{{ displaySubject(2, 3) }} </td>
+    <td id="23" *ngIf="!displaySubject(2, 3)"> <button (click)="openModal(content,2, 3)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="33" *ngIf="displaySubject(3, 3)">{{ displaySubject(3, 3) }} </td>
+    <td id="33" *ngIf="!displaySubject(3, 3)"> <button (click)="openModal(content,3, 3)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="43" *ngIf="displaySubject(4, 3)">{{ displaySubject(4, 3) }} </td>
+    <td id="43" *ngIf="!displaySubject(4, 3)"> <button (click)="openModal(content,4, 3)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="53" *ngIf="displaySubject(5, 3)">{{ displaySubject(5, 3) }} </td>
+    <td id="53" *ngIf="!displaySubject(5, 3)"> <button (click)="openModal(content,5, 3)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+  </tr>
+  <tr>
+    <th>Lecture 4</th>
+    <td id="14" *ngIf="displaySubject(1, 4)">{{ displaySubject(1, 4) }} </td>
+    <td id="14" *ngIf="!displaySubject(1, 4)"> <button (click)="openModal(content,1, 4)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="24" *ngIf="displaySubject(2, 4)">{{ displaySubject(2, 4) }} </td>
+    <td id="24" *ngIf="!displaySubject(2, 4)"> <button (click)="openModal(content,2, 4)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="34" *ngIf="displaySubject(3, 4)">{{ displaySubject(3, 4) }} </td>
+    <td id="34" *ngIf="!displaySubject(3, 4)"> <button (click)="openModal(content,3, 4)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="44" *ngIf="displaySubject(4, 4)">{{ displaySubject(4, 4) }} </td>
+    <td id="44" *ngIf="!displaySubject(4, 4)"> <button (click)="openModal(content,4, 4)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="54" *ngIf="displaySubject(5, 4)">{{ displaySubject(5, 4) }} </td>
+    <td id="54" *ngIf="!displaySubject(5, 4)"> <button (click)="openModal(content,5, 4)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+  </tr>
+  <tr>
+    <th>Lecture 5</th>
+    <td id="15" *ngIf="displaySubject(1, 5)">{{ displaySubject(1, 5) }} </td>
+    <td id="15" *ngIf="!displaySubject(1, 5)"> <button (click)="openModal(content,1, 5)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="25" *ngIf="displaySubject(2, 5)">{{ displaySubject(2, 5) }} </td>
+    <td id="25" *ngIf="!displaySubject(2, 5)"> <button (click)="openModal(content,2, 5)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="35" *ngIf="displaySubject(3, 5)">{{ displaySubject(3, 5) }} </td>
+    <td id="35" *ngIf="!displaySubject(3, 5)"> <button (click)="openModal(content,3, 5)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="45" *ngIf="displaySubject(4, 5)">{{ displaySubject(4, 5) }} </td>
+    <td id="45" *ngIf="!displaySubject(4, 5)"> <button (click)="openModal(content,4, 5)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="55" *ngIf="displaySubject(5, 5)">{{ displaySubject(5, 5) }} </td>
+    <td id="55" *ngIf="!displaySubject(5, 5)"> <button (click)="openModal(content,5, 5)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+  </tr>
+  <tr>
+    <th>Lecture 6</th>
+    <td id="16" *ngIf="displaySubject(1, 6)">{{ displaySubject(1, 6) }} </td>
+    <td id="16" *ngIf="!displaySubject(1, 6)"> <button (click)="openModal(content,1, 6)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="26" *ngIf="displaySubject(2, 6)">{{ displaySubject(2, 6) }} </td>
+    <td id="26" *ngIf="!displaySubject(2, 6)"> <button (click)="openModal(content,2, 6)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="36" *ngIf="displaySubject(3, 6)">{{ displaySubject(3, 6) }} </td>
+    <td id="36" *ngIf="!displaySubject(3, 6)"> <button (click)="openModal(content,3, 6)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="46" *ngIf="displaySubject(4, 6)">{{ displaySubject(4, 6) }} </td>
+    <td id="46" *ngIf="!displaySubject(4, 6)"> <button (click)="openModal(content,4, 6)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+    <td id="56" *ngIf="displaySubject(5, 6)">{{ displaySubject(5, 6) }} </td>
+    <td id="56" *ngIf="!displaySubject(5, 6)"> <button (click)="openModal(content,5, 6)"
+        class="btn btn-sm btn-outline-dark">Add Lecture</button> </td>
+  </tr>
+</table>
+
+
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title"> {{ modalTitle }}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="addLectureForm" novalidate="">
+      <div class="form-group">
+        <div class="form-row align-items-center">
+          <div class="col-12">
+            <label class="form-label mb-0">Subject name</label>
+          </div>
+          <div class="form-group col-12">
+            <input id="sname" formControlName="subject_name" class="form-control" name="dp">
+            <div class="tooltip-box mb-2">
+              <h6 class="err-danger" *ngIf="submitted && f.subject_name.errors">Please enter subject name </h6>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label mb-0">Professor</label>
+          </div>
+          <div class="form-group col-12">
+            <select class="form-control" formControlName="professor">
+              <option value="" disabled>Select professor</option>
+              <option *ngFor="let professor of professorList" [ngValue]="professor._id">
+                {{ professor.first_name }}
+              </option>
+            </select>
+            <div class="tooltip-box mb-2">
+              <h6 class="err-danger" *ngIf="submitted && f.professor.errors && f.professor.errors.required">Please
+                select professor </h6>
+              <h6 class="err-danger" *ngIf="limitExceededErr">{{limitExceededErr}}</h6>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" (click)="submitLecture()" class="btn btn-outline-dark">Save</button>
+  </div>
+</ng-template>

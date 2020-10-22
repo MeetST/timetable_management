@@ -7,10 +7,16 @@
 <div style="overflow:auto;">
   <table>
     <tr>
-      <th>Class List</th>
+      <th colspan="2">Class List</th>
+    </tr>
+    <tr>
+      <th>Class Name</th>
+      <th>Actions</th>
     </tr>
     <tr *ngFor="let class of classList">
       <td>{{class.name}}</td>
+      <td> <button [routerLink]="['/class-view',class._id]" routerLinkActive="router-link-active"
+          class="btn btn-sm btn-outline-dark">Manage Time Table</button></td>
     </tr>
   </table>
 </div>

@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfessorManageComponent } from './professor/professor-manage/professor-manage.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ClassViewComponent } from './class/class-view/class-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClassManageComponent,
-    ProfessorManageComponent
+    ProfessorManageComponent,
+    ClassViewComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment'
+import { param } from 'jquery';
 @Injectable({
   providedIn: 'root'
 })
@@ -16,6 +17,18 @@ export class ClassServiceService {
 
   addClass(data) {
     return this.http.post(`${this.baseUrl}class/add`, data);
+  }
+
+  getClassWeeklyTimeTable(class_id) {
+    return this.http.get(`${this.baseUrl}lecture/weekly/list`, {
+      params: {
+        class_id: class_id
+      }
+    });
+  }
+
+  addLecture(data) {
+    return this.http.post(`${this.baseUrl}lecture/add`, data);
   }
 
 }
