@@ -7,17 +7,20 @@
 <div style="overflow:auto;">
   <table>
     <tr>
-      <th colspan="3">Professor List</th>
+      <th colspan="4">Professor List</th>
     </tr>
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Email</th>
+      <th>Actions</th>
     </tr>
     <tr *ngFor="let professor of professorList">
       <td>{{professor.first_name}}</td>
       <td>{{professor.last_name}}</td>
       <td>{{professor.email}}</td>
+      <td> <button [routerLink]="['/professor-time-table',professor._id]" routerLinkActive="router-link-active"
+        class="btn btn-sm btn-outline-dark">View Time Table</button></td>
     </tr>
   </table>
 </div>

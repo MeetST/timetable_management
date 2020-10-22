@@ -21,6 +21,7 @@ export class ClassViewComponent implements OnInit {
   timeTable = [];
   modalTitle = "Add Lecture ";
   class_id = "";
+  class = {};
   professorList = [];
   limitExceededErr = '';
   submitted = false;
@@ -56,6 +57,7 @@ export class ClassViewComponent implements OnInit {
 
     this.classService.getClassWeeklyTimeTable(this.class_id).subscribe((data: any) => {
       this.timeTable = data.data.list;
+      this.class = data.data.class;
     });
   }
 
