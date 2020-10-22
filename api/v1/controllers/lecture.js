@@ -89,13 +89,45 @@ let _self = {
         }
     },
 
+    getProfessorWeeklyTimeTable: async (req, res) => {
+        let returnResp;
+        if (req.query.professor_id) {
+            let query = {
+                professor: req.query.professor_id
+            }
+            let lectures = await Lecture
+                .find(query)
+                .populate({
+                    path: 'class',
+                    select: ['name']
+                }).sort({
+                    day: 1,
+                    slot: 1
+                });
+            lectures = lectures.map((lec) => lec = lec)
+            returnResp = {
+                message: Message.COMMON_SUCCESS,
+                data: {
+                    list: lectures
+                }
+            }
+            res.status(200).send(returnResp)
+        } else {
+            returnResp = {
+                message: Message.PROFESSOR_ID_REQUIRED,
+                data: {}
+            }
+            res.status(400).send(returnResp)
+        }
+    },
+
     getClassWeeklyTimetable: async (req, res) => {
         let returnResp
         if (req.query.class_id) {
             let query = {
                 class: req.query.class_id
             }
-            let lectures = await Lecture.find(query).sort({day:1, slot: 1});
+            let lectures = await Lecture.find(query).sort({ day: 1, slot: 1 });
             returnResp = {
                 message: Message.COMMON_SUCCESS,
                 data: {

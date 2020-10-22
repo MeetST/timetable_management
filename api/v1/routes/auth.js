@@ -11,7 +11,8 @@ router.post('/api/professor/add', ProfessorController.addProfessor);
 router.get('/api/professor/list', ProfessorController.getAllProfessors);
 
 router.post('/api/lecture/add', LectureController.addLecture);
-router.get('/api/lecture/weekly/list', LectureController.getClassWeeklyTimetable);
+router.get('/api/lecture/class/weekly/list', LectureController.getClassWeeklyTimetable);
+router.get('/api/lecture/professor/weekly/list', LectureController.getProfessorWeeklyTimeTable);
 
 // exports router
 module.exports = router

@@ -12,4 +12,5 @@ module.exports = {
     DAILY_LECTURE_LIMIT_REACHED: "Can not add more than 6 lectures a day for class",
     WEEKLY_LECTURE_LIMIT_REACHED: "Can not add more than 25 lectures a week for class",
     CLASS_ID_REQUIRED: "Class id is required",
+    PROFESSOR_ID_REQUIRED: "Professor id is required",
 }

@@ -20,9 +20,17 @@ export class ClassServiceService {
   }
 
   getClassWeeklyTimeTable(class_id) {
-    return this.http.get(`${this.baseUrl}lecture/weekly/list`, {
+    return this.http.get(`${this.baseUrl}lecture/class/weekly/list`, {
       params: {
         class_id: class_id
+      }
+    });
+  }
+
+  getProfessorWeeklyTimeTable(professor_id) {
+    return this.http.get(`${this.baseUrl}lecture/professor/weekly/list`, {
+      params: {
+        professor_id: professor_id
       }
     });
   }
